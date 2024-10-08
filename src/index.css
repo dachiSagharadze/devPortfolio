@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#root {
+  /* Background Colors */
+  --background-primary: #121212;
+  --background-secondary: #1E1E1E;
+  
+  /* Text Colors */
+  --text-primary: #E0E0E0;
+  --text-secondary: #B0B0B0;
+  
+  /* Accent Colors */
+  --accent-color: #BB86FC;
+  --highlight-color: #03DAC6;
+  
+  /* UI Element Colors */
+  --button-bg: #3700B3;
+  --button-text: #FFFFFF;
+  --border-color: #2C2C2C;
+  
+  /* Apply Base Styles */
+  background-color: var(--background-primary);
+  color: var(--text-primary);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+}
+
+body{
+  background: #121212;
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+.fancyText{
+  font-family: 'Source Code Pro', monospace;
+}
+.screen-max-width {
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  position: relative;
+  max-width: 1120px;
+}
+.nav-height{
+  @apply h-[calc(100vh-100)]
+}
+.flex-center{
+  @apply flex items-center justify-center
+}
+.hero-title{
+  @apply text-center font-semibold text-3xl text-gray-200 opacity-0
+}
+img{
+  max-width: 100%;
+  max-height: 100%;
+}
+.bigImage{
+  max-height: 10%;
+}
+li{
+  display: flex;
+  align-items: center;
+  font-size: 0.7rem;
+}
+.chatbox .chat{
+  display: flex;
+}
+.chatbox .outgoing{
+  justify-content: flex-end;
+  padding-right: 2.75rem;
+  margin-top: 1rem;
+}
+.chatbox .outgoing p{
+  max-width: 75%;
+  background-color: black;
+  border-radius: 1rem 1rem 0rem 1rem;
+  padding: 1rem;
+  word-wrap: break-word;
+}
+.chatbox .incoming {
+  justify-content: flex-start;
+  padding-right: 2.75rem;
+  margin-top: 1rem;
+}
+.chatbox .incoming p{
+  max-width: 75%;
+  word-wrap: break-word;
+  color: white;
+  background: black;
+  padding: 1rem;  
+  border-radius: 1rem 1rem 1rem 0;
+}
+.chatbox .incoming img{
+  height: 4rem;
+  width: 4rem;
+  padding: 1rem;
+  border-radius: 100%;
+  margin-left: 1.25rem;
+}
+@media (max-width: 700px) {
+  .chatbox .incoming p {
+    max-width: 60%;  /* Increase the width for smaller screens */
+    font-size: 0.5rem;  /* Adjust font size */
+    padding: 0.7rem;  /* Adjust padding */
+  }
+  .chatbox .outgoing p {
+    font-size: 0.5rem;  /* Adjust font size */
+    padding: 0.7rem;
+    max-width: 60%;
+  }
+  .chatbox .incoming{
+    margin-left: -2rem;
+    width: auto;
+  }
+  .chatbox .outgoing{
+    margin-right: -2rem;
+    width: auto;
+  }
+}
+.navbarSm{
+  display: none;
+}
