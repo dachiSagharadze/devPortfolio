@@ -16,6 +16,8 @@ jobs:
 
       - name: Setup Node
         uses: actions/setup-node@v3
+        with:
+          node-version: '20'  # Specify Node.js version 20
 
       - name: Install dependencies
         uses: bahmutov/npm-install@v1
@@ -45,5 +47,5 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.MY_CUSTOM_GITHUB_TOKEN }}  # Use your custom token
           publish_dir: ./dist
